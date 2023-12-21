@@ -43,13 +43,13 @@
                     <a class="nav-link menu-link" href="#ImageLayout" data-bs-toggle="collapse" role="button"
                         aria-expanded="false" aria-controls="ImageLayout">
                         <i data-feather="image" class="icon-dual"></i>
-                        <span data-key="t-dashboards">Menu</span>
+                        <span data-key="t-dashboards">Gallery</span>
                     </a>
                     <div class="collapse menu-dropdown" id="ImageLayout">
                         <ul class="nav nav-sm flex-column">
                             <li class="nav-item">
-                                <a href="" class="nav-link" data-key="t-analytics">
-                                    Dropdown Menu
+                                <a href="{{ route('admin.album.index') }}" class="nav-link" data-key="t-analytics">
+                                    Albums
                                 </a>
                             </li>
                         </ul>
