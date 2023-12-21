@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Album;
-use Brian2694\Toastr\Facades\Toastr;
+use App\Models\Photo;
 use Illuminate\Http\Request;
+use Brian2694\Toastr\Facades\Toastr;
 
 class AlbumController extends Controller
 {
@@ -49,8 +50,12 @@ class AlbumController extends Controller
 
     public function show(Album $album)
     {
-        //
+        $album_id = $album->id;
+        $photos = Photo::where('album_id', $album_id)->get();
+        return view('Backend.Dashboard.Gallery.Photo.index', compact('photos', 'album'));
     }
+
+
 
     public function edit(Album $album)
     {

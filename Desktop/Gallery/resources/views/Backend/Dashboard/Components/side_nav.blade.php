@@ -52,6 +52,11 @@
                                     Albums
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.album.create') }}" class="nav-link" data-key="t-analytics">
+                                    Create Album
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </li>

@@ -4,7 +4,7 @@
     <div class="row">
         <div class="card col-12">
             <div class="card-header d-flex justify-content-between">
-                <h5 class="card-title align-self-center mb-0">Album</h5>
+                <h5 class="card-title align-self-center mb-0">Albums</h5>
                 <a href="{{ route('admin.album.create') }}" class="btn btn-sm btn-primary px-3 py-2">Add Album</a>
             </div>
             <div class="card-body">
@@ -19,7 +19,8 @@
                                     <p class="card-text">{{ $album->description }}</p>
                                 </div>
                                 <div class="card-body d-flex justify-content-between">
-                                    <a href="" class="btn btn-sm btn-primary px-3 py-1">View</a>
+                                    <a href="{{ route('admin.album.show', $album->id) }}"
+                                        class="btn btn-sm btn-primary px-3 py-1">View</a>
                                     <a href="{{ route('admin.album.edit', $album->id) }}"
                                         class="btn btn-sm btn-success px-3 py-1">Edit</a>
                                     <form action="{{ route('admin.album.destroy', $album->id) }}" method="post">
